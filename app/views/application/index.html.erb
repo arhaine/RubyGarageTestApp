@@ -1,0 +1,19 @@
+<% @projects_all.each do |project| %>
+
+<table border="1">
+  <tr>
+    <td colspan="3"><%= project.name %></td>
+  </tr>
+  <tr>
+    <td colspan="3">SEARCH TO BE HERE</td>
+  </tr>
+  <% project.tasks.each do |task| %>
+      <tr>
+        <td><input type="checkbox" <% task.is_completed ? "checked" : "" %> ></td>
+        <td><%= task.name %></td>
+        <td>ADD BUTTONS HERE</td>
+      </tr>
+  <% end %>
+</table>
+
+<% end %>

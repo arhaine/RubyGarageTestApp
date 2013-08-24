@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  project_id: 1
+  priotity: 1
+  is_completed: false
+  deadline: 
+
+two:
+  name: MyString
+  description: MyString
+  project_id: 1
+  priotity: 1
+  is_completed: false
+  deadline: 
