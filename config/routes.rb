@@ -5,6 +5,11 @@ RubyGarageTaskManager::Application.routes.draw do
   get "tasks/new"
   get "projects/new"
   get "users/new"
+
+  resources :projects
+  resources :tasks
+  resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
