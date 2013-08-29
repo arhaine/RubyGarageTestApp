@@ -1,0 +1,14 @@
+<h1>Tasks#edit</h1>
+<p>Find me in app/views/tasks/edit.html.erb</p>
+
+<%= form_for(@task) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :priority %>
+    <%= f.text_field :priority %>
+    <%= f.label :deadline %>
+    <%= f.date_select :deadline %>
+    <%= button_tag'Confirm', class:'btn-primary', type:'submit'%>
+<% end %>

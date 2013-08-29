@@ -34,7 +34,7 @@
           </div>
         </td>
       </tr>
-      <% project.tasks.each do |task| %>
+      <% project.tasks.order("priority DESC").each do |task| %>
           <tr>
             <td class="small-width15"><input type="checkbox" <% task.is_completed ? "checked" : "" %> ></td>
             <td><%= task.name %></td>
