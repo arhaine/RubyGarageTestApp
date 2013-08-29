@@ -16,7 +16,7 @@
           <%= link_to edit_project_path project.id do %>
               <i class="icon-pencil align-right"></i>
           <% end %>
-          <%= link_to project_path(project.id), :method => :delete do %>
+          <%= button_to project_path(project.id), :method => :delete, class: "btn" do %>
               <i class="icon-trash align-right"></i>
           <% end %>
         </div>
@@ -24,8 +24,14 @@
       </tr>
       <tr>
         <td colspan="3">
-          <i class="icon-plus"></i> <input class="set-width80"/>
-          <input type="submit" class="btn btn-success btn-small" value="Add Task"/>
+          <i class="icon-plus"></i>
+          <div class="input-append">
+          <%= form_tag('/tasks', method: 'post') do %>
+              <%= text_field_tag :name, placeholder='Please enter your task here', class: 'span6'%>
+              <%= hidden_field_tag(:project_id, project.id) %>
+              <%= button_tag'Add Task', class:'btn', type:'submit'%>
+          <% end %>
+          </div>
         </td>
       </tr>
       <% project.tasks.each do |task| %>
@@ -40,7 +46,7 @@
                 <%= link_to edit_task_path task.id do %>
                     <i class="icon-pencil"></i>
                 <%end%>
-                <%= link_to task_path(task.id), :method => :delete do %>
+                <%= button_to task_path(task.id), :method => :delete do %>
                     <i class="icon-trash"></i>
                 <%end%>
               </div>
@@ -53,6 +59,6 @@
 
 <% end %>
 <div class="button-centered">
-  <%= link_to "Add New Project", new_project_path, class: "btn btn-success btn-large" %>
+  <%= link_to 'Add New Project', new_project_path, class: "btn btn-success btn-large" %>
 </div>
 </div>
