@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    proj = Project.create name: params[:name], user: User.first
+    proj = Project.create name: params[:name], user_id: current_user.id
     if proj.valid?
       redirect_to '/'
     end

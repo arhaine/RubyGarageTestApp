@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     if current_user
       @projects_all = Project.where user_id: current_user.id
     else
-      render :not_signed_in, layout: false
+      render :not_signed_in
     end
   end
 end

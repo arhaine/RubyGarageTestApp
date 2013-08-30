@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to the TaskManager!"
-      redirect_to @user
+      redirect_to '/'
     else
       render 'new'
     end

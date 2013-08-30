@@ -1,9 +1,11 @@
-<h1>Projects#new</h1>
-<p>Find me in app/views/projects/new.html.erb</p>
-
+<div class="text-center">
+  <h1>Edit Project</h1>
+  <div class="span6 centered">
 <%= form_for(@project) do |f| %>
     <div class="input-append">
         <%= f.text_field :name %>
         <%= button_tag'Confirm', class:'btn', type:'submit'%>
     </div>
 <% end %>
+  </div>
+</div>
