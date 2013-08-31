@@ -1,30 +1,56 @@
-== README
+SQL Task
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Given tables: 
+● tasks (id, name, status, project_id)
+● projects (id, name)
 
-Things you may want to cover:
+1
+SELECT DISTINCT status FROM tasks ORDER BY status
 
-* Viking's awesomeness
+2. 
+SELECT projects.id, COUNT(tasks) AS cnt 
+FROM tasks 
+RIGHT JOIN projects ON tasks.project_id = projects.id GROUP BY projects.id
+ORDER BY task_count DESC
 
-* Ruby version
+3. 
+SELECT projects.name, COUNT(tasks) AS cnt
+FROM tasks 
+RIGHT JOIN projects ON task.project_id=projects.id
+GROUP BY projects.id
+ORDER BY task_count
 
-* System dependencies
+4. 
+SELECT projects.name, task.name
+FROM tasks 
+INNER JOIN projects ON tasks.project_id=projects.id
+WHERE tasks.name LIKE 'N%'
 
-* Configuration
+5.
+SELECT projects.name, COUNT(tasks) AS cnt
+FROM tasks 
+RIGHT JOIN projects ON task.project_id = projects.id
+WHERE projects.name LIKE '%a%'
+GROUP BY projects.id
 
-* Database creation
+6.
+SELECT id, name
+FROM tasks
+WHERE name IN (SELECT name FROM tasks GROP BY name HAVING COUNT(*) >1)
+ORDER BY name
 
-* Database initialization
+7. 
+SELECT tasks.name
+FROM tasks 
+RIGHT JOIN projects ON tasks.projects_id = projects.id
+WHERE projects.name = 'Garage' 
+GROUP BU tasks.name, tasks.status
+HAVING COUNT(tasks) >1
+ORDER BY COUNT(tasks)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+8. SELECT  projects.name
+FROM tasks 
+RIGTH JOIN projects ON tasks.projects_id = projects.id
+WHERE tasks.status = 'completed'
+GROUP BY projects.id HAVING COUNT(tasks) >10
+ORDER BY projects.id
