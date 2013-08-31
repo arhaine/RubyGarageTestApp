@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+
   def create
     task = Task.create name: params[:name], project_id: params[:project_id], is_completed: false
     if task.valid?
@@ -31,4 +32,11 @@ class TasksController < ApplicationController
     Task.destroy params[:id]
     redirect_to '/'
   end
+
+  def set_state
+    task = Task.find(params[:id])
+    task.change_state
+    render json: {success: true, task_id: params[:id], completed: task.is_completed?}
+  end
+
 end

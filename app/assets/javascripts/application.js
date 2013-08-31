@@ -15,3 +15,28 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
+$(document).ready(function(){
+    $(".task_checkbox").on('click',function(){
+        var trigger = this
+        task_id = $(this).attr('data-id');
+        $.post(
+            'tasks/set_state',
+            {id: task_id},
+            function(data)  {
+                if (data.completed) {
+                    $(trigger).removeClass('icon-hand-right');
+                    $(trigger).addClass('icon-ok');
+                    $("#task_"+data.task_id+"_name").addClass("striked");
+                }
+                else {
+                    $(trigger).removeClass('icon-ok');
+                    $(trigger).addClass('icon-hand-right');
+                    $("#task_"+data.task_id+"_name").removeClass("striked");
+
+                }
+            }
+        )
+
+    })
+
+})
