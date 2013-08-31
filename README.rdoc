@@ -1,10 +1,12 @@
 SQL Task
 
-Given tables: 
-● tasks (id, name, status, project_id)
-● projects (id, name)
+Given tables:
+
+tasks(id, name, status, project_id)
+projects(id, name)
 
 1
+SELECT DISTINCT status FROM tasks ORDER BY status
 SELECT DISTINCT status FROM tasks ORDER BY status
  
 2. 
