@@ -6,7 +6,7 @@ Given tables:
 
 1
 SELECT DISTINCT status FROM tasks ORDER BY status
-
+ 
 2. 
 SELECT projects.id, COUNT(tasks) AS cnt 
 FROM tasks 
