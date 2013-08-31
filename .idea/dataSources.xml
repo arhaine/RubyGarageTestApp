@@ -18,9 +18,9 @@
     </data-source>
     <data-source source="LOCAL" name="Rails RubyGarageTaskManager: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="4a5a497e-e69f-44e1-9006-90298e9ce391">
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1/task_manager_production</jdbc-url>
-      <user-name>postgres</user-name>
-      <user-password>dfdadfc5dfd9dfdedfcddfd8dfcfdfd9</user-password>
+      <jdbc-url>jdbc:postgresql://ec2-107-20-245-109.compute-1.amazonaws.com/d1nhp3rkivnhcn</jdbc-url>
+      <user-name>xiyrmmqljtfnys</user-name>
+      <user-password>dfc5df9adfcfdfc0dfffdfdddfc4df9fdfffdfecdfcbdfdddfd0dffcdfe9dfc2dfccdfe5df93dfc8dff3dff8dfd9dfe7df9bdff9</user-password>
       <libraries>
         <library>
           <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/postgresql-driver-license.txt</url>

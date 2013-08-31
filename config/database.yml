@@ -17,7 +17,7 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  database: task_manager_production
-  username: postgres
-  password: postgres
-  host: localhost
+  database: d1nhp3rkivnhcn
+  username: xiyrmmqljtfnys
+  password: o0ejUwn5UFawzVChfO9bYRsM1S
+  host: ec2-107-20-245-109.compute-1.amazonaws.com
