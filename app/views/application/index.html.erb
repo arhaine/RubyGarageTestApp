@@ -25,7 +25,7 @@
           <% end %>
         </td>
       </tr>
-      <% project.tasks.order("priority DESC").each do |task| %>
+      <% project.tasks.order("priority").each do |task| %>
           <tr>
             <td class="small-width15">
               <span class="task_checkbox <%= task.is_completed? ? 'icon-ok' : 'icon-hand-right' %> " data-id="<%= task.id%>">
