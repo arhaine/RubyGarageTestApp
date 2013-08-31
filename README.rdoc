@@ -5,54 +5,54 @@ Given tables:
 tasks(id, name, status, project_id)
 projects(id, name)
 
-1
-SELECT DISTINCT status FROM tasks ORDER BY status
-SELECT DISTINCT status FROM tasks ORDER BY status
+===1
+  SELECT DISTINCT status FROM tasks ORDER BY status
+  SELECT DISTINCT status FROM tasks ORDER BY status
  
-2. 
-SELECT projects.id, COUNT(tasks) AS cnt 
-FROM tasks 
-RIGHT JOIN projects ON tasks.project_id = projects.id GROUP BY projects.id
-ORDER BY task_count DESC
+===2. 
+  SELECT projects.id, COUNT(tasks) AS cnt 
+  FROM tasks 
+  RIGHT JOIN projects ON tasks.project_id = projects.id GROUP BY projects.id
+  ORDER BY task_count DESC
 
-3. 
-SELECT projects.name, COUNT(tasks) AS cnt
-FROM tasks 
-RIGHT JOIN projects ON task.project_id=projects.id
-GROUP BY projects.id
-ORDER BY task_count
+===3. 
+  SELECT projects.name, COUNT(tasks) AS cnt
+  FROM tasks 
+  RIGHT JOIN projects ON task.project_id=projects.id
+  GROUP BY projects.id
+  ORDER BY task_count
 
-4. 
-SELECT projects.name, task.name
-FROM tasks 
-INNER JOIN projects ON tasks.project_id=projects.id
-WHERE tasks.name LIKE 'N%'
+===4. 
+  SELECT projects.name, task.name
+  FROM tasks 
+  INNER JOIN projects ON tasks.project_id=projects.id
+  WHERE tasks.name LIKE 'N%'
 
-5.
-SELECT projects.name, COUNT(tasks) AS cnt
-FROM tasks 
-RIGHT JOIN projects ON task.project_id = projects.id
-WHERE projects.name LIKE '%a%'
-GROUP BY projects.id
+===5.
+  SELECT projects.name, COUNT(tasks) AS cnt
+  FROM tasks 
+  RIGHT JOIN projects ON task.project_id = projects.id
+  WHERE projects.name LIKE '%a%'
+  GROUP BY projects.id
 
-6.
-SELECT id, name
-FROM tasks
-WHERE name IN (SELECT name FROM tasks GROP BY name HAVING COUNT(*) >1)
-ORDER BY name
+===6.
+  SELECT id, name
+  FROM tasks
+  WHERE name IN (SELECT name FROM tasks GROP BY name HAVING COUNT(*) >1)
+  ORDER BY name
 
-7. 
-SELECT tasks.name
-FROM tasks 
-RIGHT JOIN projects ON tasks.projects_id = projects.id
-WHERE projects.name = 'Garage' 
-GROUP BU tasks.name, tasks.status
-HAVING COUNT(tasks) >1
-ORDER BY COUNT(tasks)
+===7. 
+  SELECT tasks.name
+  FROM tasks 
+  RIGHT JOIN projects ON tasks.projects_id = projects.id
+  WHERE projects.name = 'Garage' 
+  GROUP BU tasks.name, tasks.status
+  HAVING COUNT(tasks) >1
+  ORDER BY COUNT(tasks)
 
-8. SELECT  projects.name
-FROM tasks 
-RIGTH JOIN projects ON tasks.projects_id = projects.id
-WHERE tasks.status = 'completed'
-GROUP BY projects.id HAVING COUNT(tasks) >10
-ORDER BY projects.id
+===8. SELECT  projects.name
+  FROM tasks 
+  RIGTH JOIN projects ON tasks.projects_id = projects.id
+  WHERE tasks.status = 'completed'
+  GROUP BY projects.id HAVING COUNT(tasks) >10
+  ORDER BY projects.id
