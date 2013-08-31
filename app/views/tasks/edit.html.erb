@@ -1,12 +1,12 @@
 <div class="text-center">
-  <h1>New Task</h1>
+  <h1>Edit Task</h1>
 
 <% @task.errors.each do |attr, message| %>
   <p class="label label-important text-error"><%= attr.capitalize %> <%= message %></p>
 <% end if @task %>
 
+
 <%= form_for(@task, class: "form-horizontal") do |f| %>
-      <%= f.hidden_field :project_id %>
   <div class="centered">
     <div class="form-group">
         <%= f.label :name, class: "control-label" %>

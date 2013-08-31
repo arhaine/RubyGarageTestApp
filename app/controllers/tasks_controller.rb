@@ -2,13 +2,7 @@ class TasksController < ApplicationController
 
   def create
       @task = Task.create name: params[:name], project_id: params[:project_id], is_completed: false, priority: 1
-      if @task.valid?
-        redirect_to '/'
-      else
-        render 'edit'
-
-      end
-
+      redirect_to '/'
   end
 
   def edit
@@ -30,6 +24,7 @@ class TasksController < ApplicationController
       flash[:success] = 'Update succeeded'
       redirect_to '/'
     else
+      @params = params
       render 'edit'
     end
   end
