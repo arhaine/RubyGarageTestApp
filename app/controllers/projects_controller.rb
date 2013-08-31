@@ -23,6 +23,7 @@ class ProjectsController < ApplicationController
 
   def destroy
     Project.destroy params[:id]
+    Task.delete_all project_id: params[:id]
     redirect_to '/'
   end
 end
