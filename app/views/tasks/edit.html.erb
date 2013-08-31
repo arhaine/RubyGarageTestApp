@@ -6,7 +6,7 @@
 <% end if @task %>
 
 <%= form_for(@task, class: "form-horizontal") do |f| %>
-      <%= f.hidden_field_tag :project_id %>
+      <%= f.hidden_field :project_id %>
   <div class="centered">
     <div class="form-group">
         <%= f.label :name, class: "control-label" %>
