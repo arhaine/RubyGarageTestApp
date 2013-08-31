@@ -8,7 +8,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="023e6da0-23fd-4126-b4cd-2840110bc228" time="1377955322704" ignored="false" />
     <file path="/tasks_controller.rb" changelist="023e6da0-23fd-4126-b4cd-2840110bc228" time="1377970861736" ignored="false" />
-    <file path="/edit.html.erb" changelist="023e6da0-23fd-4126-b4cd-2840110bc228" time="1377971199384" ignored="false" />
+    <file path="/edit.html.erb" changelist="023e6da0-23fd-4126-b4cd-2840110bc228" time="1377971304525" ignored="false" />
     <file path="/index.html.erb" changelist="023e6da0-23fd-4126-b4cd-2840110bc228" time="1377970977243" ignored="false" />
     <file path="/users_controller.rb" changelist="023e6da0-23fd-4126-b4cd-2840110bc228" time="1377810225990" ignored="false" />
     <file path="/show.html.erb" changelist="023e6da0-23fd-4126-b4cd-2840110bc228" time="1377883138382" ignored="false" />
@@ -83,7 +83,7 @@
       <file leaf-file-name="edit.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/tasks/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="30" selection-start="284" selection-end="284" vertical-scroll-proportion="0.19933555">
+            <state line="8" column="28" selection-start="282" selection-end="282" vertical-scroll-proportion="0.19933555">
               <folding />
             </state>
           </provider>
@@ -863,13 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="96" selection-start="1850" selection-end="1850" vertical-scroll-proportion="-7.2244897">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="59" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
@@ -900,9 +893,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/application/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="96" selection-start="1850" selection-end="1850" vertical-scroll-proportion="-7.2244897">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="284" selection-end="284" vertical-scroll-proportion="0.19933555">
+        <state line="8" column="28" selection-start="282" selection-end="282" vertical-scroll-proportion="0.19933555">
           <folding />
         </state>
       </provider>
