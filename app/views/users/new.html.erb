@@ -2,6 +2,9 @@
 <div class="text-center">
   <h1>Sign Up</h1>
   <div class="span6 centered">
+    <% @user.errors.each do |attr, message| %>
+        <p class="label label-important text-error"><%= attr.capitalize %> <%= message %></p>
+    <% end if @user %>
     <%= form_for(@user) do |f| %>
         <div class="form-group">
             <%= f.text_field :name, placeholder: "Username" %>

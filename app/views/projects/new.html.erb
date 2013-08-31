@@ -1,6 +1,9 @@
 <div class="text-center">
   <h1>New Project</h1>
   <div class="span6 centered">
+<% @project.errors.each do |attr, message| %>
+    <p class="label label-important text-error"><%= attr.capitalize %> <%= message %></p>
+<% end if @project %>
 <%= form_tag('/projects', method: 'post') do %>
     <div class="input-append">
         <%= text_field_tag :name, '', placeholder: 'Please enter Project name', class:'span3'%>

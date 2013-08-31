@@ -1,5 +1,8 @@
 class Task < ActiveRecord::Base
   belongs_to :project
+  validates :name, presence: true, length: { minimum: 3, maximum: 50 }
+  validates :project, presence: true
+  validates :priority, :inclusion => { :in => 0..9 }
 =begin
   before_save :default_values
   def default_values

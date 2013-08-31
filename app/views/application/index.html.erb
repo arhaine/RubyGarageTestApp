@@ -18,7 +18,7 @@
       </tr>
       <tr>
         <td colspan="3">
-          <%= form_tag("/tasks", method: 'post', class: "form-inline input-append magick") do %>
+          <%= form_tag("/tasks", method: 'post', id: 'new_task', class: "form-inline input-append magick") do %>
               <%= text_field_tag(:name, "", placeholder: 'Please enter your task here', class: 'span7') %>
               <%= hidden_field_tag(:project_id, project.id) %>
               <%= button_tag('Add Task', class:'btn', type:'submit') %>
@@ -39,7 +39,7 @@
                 <%= link_to(edit_task_path(task.id), class: "btn") do %>
                     <i class="icon-pencil"></i>
                 <% end %>
-                <%= link_to(task_path(task.id), :method => :delete, class: "btn") do %>
+                <%= link_to(task_path(task.id), :method => :delete, class: "btn", :confirm => 'Are you sure?') do %>
                     <i class="icon-trash"></i>
                 <% end %>
               </div>

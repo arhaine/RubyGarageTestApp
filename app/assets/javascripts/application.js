@@ -16,6 +16,7 @@
 //= require_tree .
 //= require bootstrap
 $(document).ready(function(){
+
     $(".task_checkbox").on('click',function(){
         var trigger = this
         task_id = $(this).attr('data-id');
@@ -38,5 +39,8 @@ $(document).ready(function(){
         )
 
     })
+
+
+
 
 })

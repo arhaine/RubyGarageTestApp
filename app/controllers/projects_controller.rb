@@ -18,6 +18,8 @@ class ProjectsController < ApplicationController
     if @project.update_attributes(name: params[:project][:name])
       flash[:success] = 'Update succeeded'
       redirect_to '/'
+    else
+      render 'edit'
     end
   end
 

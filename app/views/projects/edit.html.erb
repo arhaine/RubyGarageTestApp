@@ -1,6 +1,9 @@
 <div class="text-center">
   <h1>Edit Project</h1>
   <div class="span6 centered">
+<% @project.errors.each do |attr, message| %>
+    <p class="label label-important text-error"><%= attr.capitalize %> <%= message %></p>
+<% end %>
 <%= form_for(@project) do |f| %>
     <div class="input-append">
         <%= f.text_field :name %>
